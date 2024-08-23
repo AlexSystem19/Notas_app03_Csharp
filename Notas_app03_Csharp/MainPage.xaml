@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notas_app03_Csharp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="30,60,30,30"
+                             Spacing="11">
+            <Label Text="NOTAS DE VISITA"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+            <Editor x:Name="editor"
+                Placeholder="Ingresar nota"
+                HeightRequest="100" />
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Button
+                    Text="GRABAR"
+                        HeightRequest="100"
+                        WidthRequest="183"
+                        x:Name="SaveButton"
+                    Clicked="SaveButton_Clicked" />
+                <Button 
+                    Text="BORRAR"
+                                                HeightRequest="100"
+                        WidthRequest="183"
+                        x:Name="DeleteButton"
+                    Clicked="DeleteButton_Clicked" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
