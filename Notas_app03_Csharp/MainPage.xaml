@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:recursos="clr-namespace:Notas_app03_Csharp"
              x:Class="Notas_app03_Csharp.MainPage">
     <ScrollView>
         <VerticalStackLayout Margin="30,60,30,30"
@@ -9,20 +10,24 @@
                HorizontalOptions="Center"
                FontAttributes="Bold" />
             <Editor x:Name="editor"
-                Placeholder="Ingresar nota"
-                HeightRequest="100" />
+                    HeightRequest="{OnPlatform 200, Android=200,iOS=400}"
+                Placeholder="Ingresar nota"/>
             <HorizontalStackLayout
                 HorizontalOptions="Center">
                 <Button
                     Text="GRABAR"
+                    TextColor="{x:Static Member=recursos:RecursosInternos.FontColor}"
                         HeightRequest="100"
+                    BackgroundColor="{x:Static Member=recursos:RecursosInternos.BackgroundColor}"
                         WidthRequest="183"
                         x:Name="SaveButton"
                     Clicked="SaveButton_Clicked" />
                 <Button 
                     Text="BORRAR"
                                                 HeightRequest="100"
+                    TextColor="{x:Static Member=recursos:RecursosInternos.FontColor}"
                         WidthRequest="183"
+                    BackgroundColor="{x:Static Member=recursos:RecursosInternos.BackgroundColor}"
                         x:Name="DeleteButton"
                     Clicked="DeleteButton_Clicked" />
             </HorizontalStackLayout>
